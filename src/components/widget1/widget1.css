@@ -1,0 +1,74 @@
+.widget1 {
+    grid-area: widget1;
+    background-color: var(--secondary-background);
+    display: grid;
+    grid-template-columns: 1fr 18fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas:
+        "icon1 tabs icon2"
+        "icon3 tab icon2";
+    border-radius: var(--grid-border-rad);
+    height: 40vh;
+    box-shadow: 2px 2px 7px #000;
+}
+.icon1,
+.icon3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--grid-border-rad);
+}
+
+.icon1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-background);
+}
+.tabs {
+    background-color: transparent;
+    display: flex;
+
+}
+
+.tabs p {
+    color: #949799;
+    padding: 1vh;
+    margin: 0.5em;
+    font-family: math;
+    display: block;
+    margin-bottom: 1vh;
+    line-height: 0.9;
+}
+.tab {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    /* padding: 1rem 0.5rem; */
+    margin: 1.2em 0em;
+    border-radius: 1em;
+    padding: 0.1em 0.2em;
+
+}
+
+.tab button {
+    flex: 1;
+    height: 80%;
+    background-color:transparent;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: none;
+    /* margin: 0.5% 0; */
+    padding: 0.8em 0.5em;
+    border-radius: 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.active {
+    box-shadow: 20px 40px 50px black,-16px -4px 75px #9fb3b3;
+    border-radius: 2em;
+    background-color: #949799 !important;
+}

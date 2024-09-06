@@ -1,0 +1,114 @@
+.widget2 {
+    grid-area: widget2;
+    display: grid;
+    grid-template-columns: 1fr 19fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas:
+        "icon4 menu"
+        "icon5 gallery";
+    border-radius: var(--grid-border-rad);
+    background-color: var(--secondary-background);
+    height: 40vh;
+    box-shadow: 2px 2px 7px #000;
+}
+
+.icon4,
+.icon5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.4rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu .gallery_btn {
+    padding: .6em 1em;
+    background-color: black;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 0.7em;
+    font-weight: 600;
+    border: none;
+    
+}
+
+.menu .add-img {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 1rem;
+    margin: 0.5rem 1rem;
+}
+
+.menu .add-img button {
+    margin-right: 0.5rem;
+}
+
+.menu .add_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    background-color: rgb(155, 149, 149);
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 3px 4px 6px black;
+}
+
+.menu .nav_btn {
+    padding: 0 1rem;
+    background-color: var(--primary-background);
+    border-radius: 50%;
+    border: none;
+    box-shadow: -4px -2px 4px 3px #444c4d;
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2vh;
+    overflow-x: scroll;
+    height: fit-content;
+    margin-top: 4vh;
+    padding: 0 2vw;
+
+}
+
+.gallery img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: var(--gallery-img-radius);
+    object-fit: cover;
+    /* z-index: 1; */
+    display: inline-block;
+    filter: grayscale(100%);
+
+}
+.gallery img:hover{
+    z-index: 2;
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: rotate(5deg),scaleX(1.2),translateY(20px);
+    /* transform: var(--t1,)
+    var(--t2,); */
+
+
+}
+
+.scal:hover{
+    --t2:scaleX(1.2em);
+}
+.rotat:hover{
+   --t1: rotate(5deg);
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
